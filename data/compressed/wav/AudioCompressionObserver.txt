@@ -1,0 +1,10 @@
+11:30:09 ::Fichier compressé : ./data/compressed/wav/c-audio1.wav
+11:30:10 ::Fichier compressé : ./data/compressed/wav/c-audio2.wav
+11:30:10 ::Fichier compressé : ./data/compressed/wav/c-audio3.wav
+11:30:10 ::Fichier compressé : ./data/compressed/wav/c-audio4.wav
+11:30:10 ::Fichier compressé : ./data/compressed/wav/c-audio5.wav
+11:30:11 ::Fichier compressé : ./data/compressed/wav/c-audio6.wav
+11:30:11 ::Fichier compressé : ./data/compressed/wav/c-audio7.wav
+11:30:11 ::Fichier compressé : ./data/compressed/wav/c-audio8.wav
+11:30:11 ::Fichier compressé : ./data/compressed/wav/c-audio9.wav
+11:30:11 ::Fichier compressé : ./data/compressed/wav/c-audio10.wav

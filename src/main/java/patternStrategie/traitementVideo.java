@@ -1,0 +1,63 @@
+package patternStrategie;
+
+import antipattern.FileWriter;
+
+import java.io.*;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
+public class traitementVideo implements DataCompressionStrategy{
+    @Override
+    public String processData(Data data) {
+        String result = "./data/compressed/mp4/c-" + data.getFile().getName();
+        try {
+            FileInputStream inputStream = new FileInputStream(data.getFile().getAbsolutePath());
+
+            FileOutputStream outputStream = new FileOutputStream(result);
+
+
+            byte[] buffer = new byte[4096];
+            int length;
+
+            while (true) {
+
+                if (!((length = inputStream.read(buffer)) > 0)) break;
+                outputStream.write(buffer, 0, length);
+
+
+            }
+
+
+            inputStream.close();
+
+            outputStream.close();
+
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        updateVideo(result);
+        return result;
+    }
+    public void updateVideo(String fileName) {
+        // Code d'observation pour les videos
+        if (fileName.contains("/mp4/")) {
+            LocalTime now = LocalTime.now();
+
+
+            // Formater l'heure dans le format souhaité (hh:mm:ss)
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+            String formattedTime = now.format(formatter);
+            String content = formattedTime;
+
+
+            System.out.println("-----------------------------------------------------------------------");
+            System.out.println("Observation des audios...");
+
+            content += " ::Fichier compressé : " + fileName;
+            FileWriter.writeToFile("./data/compressed/mp4/VideoCompressionObserver.txt", content);
+            System.out.println("-----------------------------------------------------------------------");
+        }
+    }
+}
