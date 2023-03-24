@@ -30,8 +30,9 @@ public class AppStrategy {
         }
         // Création du DataCompression
         DataCompress dataCompress = new DataCompress(new traitementImage());
-
+        dataCompress.addDataObserver(new AudioObserver());
         dataCompress.addDataObserver(new ImageObserver());
+        dataCompress.addDataObserver(new VideoObserver());
         // Traitement des données avec la stratégie de traitement appropriée
         String imageResult, soundResult;
         String videoResult= "";
@@ -39,11 +40,11 @@ public class AppStrategy {
         for (int i = 0; i < 10; i++) {
             imageResult = dataCompress.compressData(imageList.get(i));
             dataCompress.setDataCompressionStrategy(new traitementSon());
-            dataCompress.addDataObserver(new AudioObserver());
+
             soundResult = dataCompress.compressData(audioList.get(i));
             if (i < 5) {
                 dataCompress.setDataCompressionStrategy(new traitementVideo());
-                dataCompress.addDataObserver(new VideoObserver());
+
                 videoResult = dataCompress.compressData(videoList.get(i));
             }
             // Vérification du résultat du traitement

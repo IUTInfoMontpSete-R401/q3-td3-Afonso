@@ -1,5 +1,5 @@
-16:15:32 ::Fichier compressé : ./data/mp4/video1.mp4
-16:15:33 ::Fichier compressé : ./data/mp4/video2.mp4
-16:15:33 ::Fichier compressé : ./data/mp4/video3.mp4
-16:15:33 ::Fichier compressé : ./data/mp4/video4.mp4
-16:15:33 ::Fichier compressé : ./data/mp4/video5.mp4
+17:03:39 ::Fichier compressé : ./data/mp4/video1.mp4
+17:03:39 ::Fichier compressé : ./data/mp4/video2.mp4
+17:03:39 ::Fichier compressé : ./data/mp4/video3.mp4
+17:03:39 ::Fichier compressé : ./data/mp4/video4.mp4
+17:03:40 ::Fichier compressé : ./data/mp4/video5.mp4
